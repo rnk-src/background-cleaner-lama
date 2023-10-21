@@ -1,5 +1,3 @@
-#!/usr/bin/env python3
-
 import glob
 import os
 import shutil
@@ -12,7 +10,6 @@ from joblib import Parallel, delayed
 from saicinpainting.evaluation.masks.mask import SegmentationMask, propose_random_square_crop
 from saicinpainting.evaluation.utils import load_yaml, SmallMode
 from saicinpainting.training.data.masks import MixedMaskGenerator
-
 
 class MakeManyMasksWrapper:
     def __init__(self, impl, variants_n=2):

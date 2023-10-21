@@ -9,10 +9,7 @@
 ############################################################
 
 import numpy as np
-from skimage.metrics import structural_similarity
 import torch
-
-from saicinpainting.utils import get_shape
 
 
 class PerceptualLoss(torch.nn.Module):
@@ -286,7 +283,6 @@ class DistModel(BaseModel):
                                use_dropout=True, spatial=spatial, version=version, lpips=True)
             kw = dict(map_location='cpu')
             if (model_path is None):
-                import inspect
                 model_path = os.path.abspath(
                     os.path.join(os.path.dirname(__file__), '..', '..', '..', 'models', 'lpips_models', f'{net}.pth'))
 

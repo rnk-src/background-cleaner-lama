@@ -32,4 +32,3 @@ docker run \
         indir=/data/input \
         outdir=/data/output \
         dataset.img_suffix=.png \
-        $@
